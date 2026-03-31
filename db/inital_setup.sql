@@ -10,7 +10,7 @@ CREATE TABLE road_to_draw.match_data (
     SEASON_FROM INT(4),
     SEASON_TO INT(4),
     MATCHDAY INT(2),
-    MATCH_DATE TIMESTAMP,
+    MATCH_DATE DATE,
     MATCH_TIME TIME, 
     RANK_HOME_TEAM INT(2),
     RANK_AWAY_TEAM INT(2),
@@ -19,3 +19,13 @@ CREATE TABLE road_to_draw.match_data (
     REFEREE VARCHAR(255)
     );
 
+DROP TABLE IF EXISTS road_to_draw.club_name_mapping;
+CREATE TABLE road_to_draw.club_name_mapping ( 
+    CLUB_ID_NO INT(10),
+    CLUB_ID VARCHAR(5),
+    CLUB_ELO_ID VARCHAR(100),
+    CLUB_MATCHES_ID VARCHAR(100),
+    CLUB_TRANSFERMARKT_ID VARCHAR(100),
+    CLUB_MW_ID VARCHAR(100),
+    CLUB_PLACE VARCHAR(100)
+);
